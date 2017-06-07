@@ -1,0 +1,37 @@
+<div class="jumbotron"  ng-init="ctrl._initBody()">
+  <h2 class="text-center first-label">Simple UUID Generator</h2>
+  <div class="gap-block center-block"></div>
+
+  <div class="center-block" style="height:23px;">
+    <span ng-if="ctrl.isCopied" class="center-block text-center animate-if" role="alert">Copied!</span>
+  </div>
+
+  <!--<span ng-if="ctrl.isCopied" class="alert alert-success center-block" role="alert">Copied!</span>-->
+
+  <p class="text-center is-label">Generated version 4 UUID:</p>
+  <h3 class="text-center has-label animate-block" ng-class="ctrl.isCopied?'glowing-border':''">
+    {{ctrl.uuid}}
+    <button ng-if="ctrl.uuid"
+          ngclipboard
+          data-clipboard-text="{{ctrl.uuid}}"
+          ngclipboard-success="ctrl.uuidCopied(e)"
+          class="btn btn-default"
+          type="submit">
+      <span class="glyphicon glyphicon-copy"></span>
+    </button>
+  </h3>
+
+  <!--<button ng-if="ctrl.uuid"
+        ngclipboard
+        data-clipboard-text="{{ctrl.uuid}}"
+        ngclipboard-success="ctrl.uuidCopied(e)"
+        class="btn btn-default center-block"
+        type="submit">
+    <span class="glyphicon glyphicon-copy"></span>
+  </button>-->
+
+  <div class="gap-block"></div>
+  <button class="btn btn-primary btn-lg center-block" type="submit" ng-click="ctrl.generateUuid()">
+    <span class="glyphicon glyphicon-flash"></span> Generate another
+  </button>
+</div>
