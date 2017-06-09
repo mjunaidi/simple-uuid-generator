@@ -6,8 +6,6 @@
     <span ng-if="ctrl.isCopied" class="center-block text-center animate-if" role="alert">Copied!</span>
   </div>
 
-  <!--<span ng-if="ctrl.isCopied" class="alert alert-success center-block" role="alert">Copied!</span>-->
-
   <p class="text-center is-label">Generated UUID version 4:</p>
   <h3 class="text-center has-label animate-block" ng-class="ctrl.isCopied?'glowing-border':''">
     {{ctrl.uuid}}
@@ -21,17 +19,37 @@
     </button>
   </h3>
 
-  <!--<button ng-if="ctrl.uuid"
-        ngclipboard
-        data-clipboard-text="{{ctrl.uuid}}"
-        ngclipboard-success="ctrl.uuidCopied(e)"
-        class="btn btn-default center-block"
-        type="submit">
-    <span class="glyphicon glyphicon-copy"></span>
-  </button>-->
-
   <div class="gap-block"></div>
   <button class="btn btn-primary btn-lg center-block" type="submit" ng-click="ctrl.generateUuid()">
     <span class="glyphicon glyphicon-flash"></span> Generate another
   </button>
 </div>
+
+<div class="row marketing">
+  <div class="col-lg-6 col-md-6 col-xs-6">
+    <h4>What is UUID?</h4>
+    <p><a href="https://en.wikipedia.org/wiki/Universally_unique_identifier" target="_blank">Universally unique identifier</a></p>
+    <p><a href="https://segment.com/blog/a-brief-history-of-the-uuid/" target="_blank">A Brief History of the UUID</a></p>
+    <p><a href="https://news.ycombinator.com/item?id=14508413" target="_blank">A Brief History of the UUID</a></p>
+
+    <!--<h4>Standards</h4>
+    <p><a href="http://pubs.opengroup.org/onlinepubs/9629399/apdxa.htm">Universal Unique Identifier</a></p>
+    <p><a href="http://www.itu.int/rec/T-REC-X.667-200409-S/en">Generation and registration of Universally Unique Identifiers</a></p>
+    <p><a href="https://tools.ietf.org/html/rfc4122">A Universally Unique IDentifier (UUID) URN Namespace</a></p>-->
+  </div>
+
+  <div class="col-lg-6 col-md-6 col-xs-6">
+    <h4>Using this UUID to</h4>
+    <p>
+      <span class="link-icon"><img src="app/uuid/ico/appearin-196x196.png" alt="appear.in" /></span>
+      <a href="https://appear.in/{{ctrl.uuid}}" target="_blank">
+        appear.in
+      </a>
+    </p>
+  </div>
+</div>
+
+<hr>
+<footer class="footer">
+  <p>&copy; 2017 M Junaidi, All Rights Reserved.</p>
+</footer>
