@@ -4,19 +4,19 @@
   angular.module('app.model').controller('MainController', MainController);
 
   MainController.$inject = [ 'modelService', 'themeService', 'storageService',
-              '$modal', '$document', '$crypto', '$http', '$scope', '$location',
+              '$uibModal', '$document', '$crypto', '$http', '$scope', '$location',
               '$timeout', 'hotkeys', 'uuid4'
             ];
 
   var DEFAULT_KEY = '';
   var ALPHABETS = 'abcdefghijklmnopqrstuvwxyz';
 
-  function MainController(modelService, themeService, storageService, modal,
+  function MainController(modelService, themeService, storageService, uibModal,
           document, crypto, http, scope, location, timeout, hotkeys, uuid4) {
     this._modelService = modelService;
     this._themeService = themeService;
     this._storageService = storageService;
-    this._modal = modal;
+    this._modal = uibModal;
     this._document = document;
     this._crypto = crypto;
     this._http = http;

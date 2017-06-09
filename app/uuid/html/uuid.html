@@ -45,7 +45,8 @@
     <h4>Using this UUID to</h4>
     <p>
       <span class="link-icon"><img src="app/uuid/ico/appearin-196x196.png" alt="appear.in" /></span>
-      <a href="https://appear.in/{{ctrl.uuid}}" target="_blank">
+      <a ng-href="https://appear.in/{{ctrl.uuid}}" target="_blank"
+        uib-tooltip-html="'Go to <a>https://appear.in/'+ctrl.uuid+'</a>'">
         appear.in
       </a>
     </p>
