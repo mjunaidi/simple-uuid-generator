@@ -141,3 +141,14 @@ div.home {
 .link-icon img {
   width: 32px;
 }
+
+.container-fluid {
+	max-width: 1040px;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+  outline: 0;
+  word-break: break-word;
+  word-wrap: break-word;
+	-webkit-font-smoothing: antialiased;
+}
